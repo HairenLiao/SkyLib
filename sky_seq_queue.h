@@ -46,7 +46,7 @@ public:
 	int  length() const { return len;  }
 	bool enQueue(const T& x);                        // 元素入队列
 	bool deQueue(T& x);                              // 元素出队列
-	bool getFront(T& x) const;                             // 返回队列头元素，但是元素不出队列
+	bool getFront(T& x) const;                       // 返回队列头元素，但是元素不出队列
     void clear() { front = rear = 0; len = 0;}       // 队列清空，但不实际清除空间
     void output() const;
     template <typename TT>
@@ -60,7 +60,6 @@ private:
 
 /**
  * @brief 构造函数，可指定最大队列空间
- * 
  */
 template <typename T>
 SeqQueue<T>::SeqQueue(int sz) : front(0), rear(0), len(0) {
@@ -167,8 +166,7 @@ void SeqQueue<T>::output() const {
 		do {
 			std::cout << elem[i] << " ";
 			i = (i + 1) % maxSize;
-		}while (i != rear);
-		
+		} while (i != rear);
 	}
 		
 	std::cout << "<--rear]" << std::endl;
@@ -185,7 +183,7 @@ std::ostream& operator<< (std::ostream& os, const SeqQueue<T>& x) {
 		do {
 			os << x.elem[i] << " ";
 			i = (i + 1) % x.maxSize;
-		}while (i != x.rear);	
+		} while (i != x.rear);	
 	}
 			
 	os << "<--rear]";	

@@ -145,7 +145,7 @@ N Polynomial<N, C>::maxDegree() const {
 		
 	PolynomialTerm<N, C>* ptrTerm = listHead;
 	while (ptrTerm->nextTerm)  // 循环到表结尾
-			ptrTerm = ptrTerm->nextTerm;
+		ptrTerm = ptrTerm->nextTerm;
 	
 	N deg = ptrTerm->n;
 	return deg;
@@ -443,8 +443,6 @@ Polynomial<N, C> operator *(const Polynomial<N, C>& p1, const Polynomial<N, C>& 
 	
 	return p;
 }
-
-
 
 /**
  * @brief 多项式乘法的另一形式实现，用临时数组存放结果，效率更高

@@ -31,9 +31,7 @@
 #include <vector>
 #include <iostream>
 
-
 namespace sky {
-
 
 
 // swap two elements of an array
@@ -126,7 +124,6 @@ void Merge( std::vector<T>& a, std::vector<T>& tmpArray, int leftPos, int rightP
 	}
 }
 
-
 template <typename T>
 void ShellSort(std::vector<T>& a) {
 	for (int gap = a.size() / 2; gap > 0; gap /= 2) {
@@ -137,8 +134,6 @@ void ShellSort(std::vector<T>& a) {
 			for (; j >= gap && tmp < a[j-gap]; j -= gap)
 				a[j] = a[j-gap];
 			a[j] = tmp;
-			
-			
 		}
 		
 	    std::cout << gap << std::endl;
@@ -146,9 +141,7 @@ void ShellSort(std::vector<T>& a) {
 			std::cout << a[t] << " ";
 		std::cout << std::endl;
 	}
-	
 }
-
 
 } // namespace sky
 
